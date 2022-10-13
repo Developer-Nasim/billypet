@@ -21,8 +21,80 @@
  
 /* small screen :320px. */
 @media (max-width: 767px) {
-
+    .title h3 {
+        font-size: 32px;
+        line-height: 25px;
+        margin-top: 25px;
+    }
+    
+    .title p {
+        font-size: 16px;
+    }
+    
+    form.form p {
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    input[type="text"] {
+        padding: 10px;
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
  
+.withOrderFlex label {
+    margin-right: 16px;
+    width:auto
+  }
+  .withOrderFlex {
+    flex-wrap: wrap;
+  }
+  form.form .flexContents label {
+    margin-right: 0;
+  }
+.withOrderFlex label span {
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+form.form > button {
+    padding: 12px 30px;  
+    font-size: 16px; 
+    margin-top: 30px;
+  }
+  
+form.form .flexContents {
+    justify-content: space-between;
+  } 
+  .choseSteps_head h4 {
+    font-size: 22px;
+}
+
+.choseSteps_head p {
+    font-size: 16px;
+}
+
+.choseSteps_bottom a {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.choseSteps_bottom a img {
+    height: auto;
+    object-fit: cover;
+}
+
+.choseSteps_bottom a p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+.choseSteps_bottom{
+    flex-wrap: wrap;
+}
+
+
+
 }
  
 /* Large Mobile screen :480px. */
