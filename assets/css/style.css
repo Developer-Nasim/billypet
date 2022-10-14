@@ -212,7 +212,7 @@ form.form.first_form.show,
 form.form.second_form.show{
   display: block;
 }
-input[type="text"]{
+input[type="text"],input[type="password"]{
   padding: 14px;
   max-width: 375px;
   width: 100%;
@@ -222,7 +222,7 @@ input[type="text"]{
   display: block;
   margin-bottom: 15px;
 } 
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,input[type="password"]::placeholder {
   color: #CAD8E4;
 }
 form.form p {
@@ -707,12 +707,33 @@ span.sts.success {
 
 
 
+/* Login page start */
 
 
 
 
+form.loginForm {
+  display: block;
+  width: 100%;
+}
 
+form.loginForm label {
+  text-align: left;
+}
 
+form.loginForm label input {
+  margin-top: 10px;
+  padding: 10px;
+  height: 42px;
+}
+
+form.loginForm  button {
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  background: #dfe7ee;
+  outline: none;
+}
 
 
 
