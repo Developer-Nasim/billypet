@@ -1,28 +1,11 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Site Title Here</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<link rel="shortcut icon" type="image/x-icon" href="#">
-        <!-- Place favicon.ico in the root directory -->
-        
-		<!-- CSS here -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/nice-select.css">
-        <link rel="stylesheet" href="assets/css/fontawesome.min.css">  
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/responsive.css">
-    </head>
-    <body>
-
+<?php
+    include_once "header.php";
+?>
        
         <!-- billyPet -->
         <div class="billyPet">
             <div class="container">
-                <div class="row">
+                <div class="row"> 
                     <div class="col-lg-12">
                         <div class="title mb-0">
                             <img src="assets/img/logo.png" alt="">
@@ -38,99 +21,115 @@
                             </div>
                             <div class="choseSteps_bottom">
                                 <a href="#first_form">
-                                    <img src="assets/img/stp.png" alt="">
+                                    <div>
+                                        <img src="assets/img/stp.png" alt="">
+                                    </div>
                                     <p>Pet Potraits</p>
                                 </a>
                                 <a href="#second_form">
-                                    <img src="assets/img/stp2.png" alt="">
+                                    <div>
+                                        <img src="assets/img/stp2.png" alt="">
+                                    </div>
                                     <p>Faceless Potraits</p>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <form class="form first_form">
-                            <p>Please provide your email address. Preferably the same one as your order (makes it easy for us to locate your order). </p>
+                        <form class="form first_form" action="incs/form.inc.php" method="post" enctype="multipart/form-data">
+                            <span style="color: red;" class="d-block mt-5">The information you provide below will need to match with the order placed.</span>
+                            <p>Please provide your email address. Preferably the same one as your order (makes it easy for us to locate your order). <b>*</b></p>
                             <label for="#">
-                                <input type="text" placeholder="Your name" name="" id="" required>
-                                <input type="text" placeholder="Your email address" name="" id="" required>
+                                <input type="text" placeholder="Your name" name="name" id="" required>
+                                <input type="text" placeholder="Your email address" name="email" id="" required>
                             </label>
-                            <p>How many pets are in your order?</p>
+                            <p>How many pets are in your order? <b>*</b></p>
                             <div class="flexContents">
                                 <label for="r1">
-                                    <input type="radio" name="pets" id="r1">
+                                    <input type="radio" value="1" name="pets" id="r1" required>
                                     <span>1</span>
                                 </label>
                                 <label for="r2">
-                                    <input type="radio" name="pets" id="r2">
+                                    <input type="radio" value="2" name="pets" id="r2" required>
                                     <span>2</span>
                                 </label>
                                 <label for="r3">
-                                    <input type="radio" name="pets" id="r3">
+                                    <input type="radio" value="3" name="pets" id="r3" required>
                                     <span>3</span>
                                 </label>
                                 <label for="r4">
-                                    <input type="radio" name="pets" id="r4">
+                                    <input type="radio" value="4" name="pets" id="r4" required>
                                     <span>4</span>
                                 </label>
                                 <label for="r5">
-                                    <input type="radio" name="pets" id="r5">
+                                    <input type="radio" value="5" name="pets" id="r5" required>
                                     <span>5</span>
                                 </label>
+                                <label for="r6">
+                                    <input type="radio" value="6" name="pets" id="r6" required>
+                                    <span>6</span>
+                                </label>
                             </div>
-                            <p>What did you order?</p>
+                            <p>What did you order? <b>*</b></p>
                             <div class="withOrderFlex">
                                 <label for="f1">
-                                    <input type="radio" name="order" id="f1">
+                                    <input type="radio" name="order" id="f1" value="Digital File" required>
                                     <span>Digital File</span>
                                 </label>
                                 <label for="f2">
-                                    <input type="radio" name="order" id="f2">
+                                    <input type="radio" name="order" id="f2" value="Print Only (No Frame)" required>
                                     <span>Print Only (No Frame)</span>
                                 </label>
                                 <label for="f3">
-                                    <input type="radio" name="order" id="f3">
+                                    <input type="radio" name="order" id="f3" value="Framed Print" required>
                                     <span>Framed Print</span>
                                 </label> 
                             </div>
-                            <p>What size did you choose? Or what size would you like for the Digital File (if purchased) option?</p>
-                            <select name="" id="" >
+                            <p>What size did you choose? Or what size would you like for the Digital File (if purchased) option? <b>*</b></p>
+                            <select name="size" id="" required>
                                 <option value="">Select Size</option>
+                                <option value="A5">A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A4">A4</option>
+                                <option value="8x10">8x10</option>
+                                <option value="12x16">12x16</option>
+                                <option value="18x24">18x24</option>
                             </select>
-                            <p>Choose your background color:</p>
+                            <p>Choose your background color: <b>*</b></p>
                             <div class="csClr">
                                 <label for="c1">
-                                    <input type="radio" name="clr" id="c1">
+                                    <input type="radio" name="clr" id="c1" value="white" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC.png" class="bgc" alt="">
                                 </label>
                                 <label for="c2">
-                                    <input type="radio" name="clr" id="c2">
+                                    <input type="radio" name="clr" id="c2" value="eggshell" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC2.png" class="bgc" alt="">
                                 </label>
                                 <label for="c3">
-                                    <input type="radio" name="clr" id="c3">
+                                    <input type="radio" name="clr" id="c3" value="olive" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC3.png" class="bgc" alt="">
                                 </label>
                                 <label for="c4">
-                                    <input type="radio" name="clr" id="c4">
+                                    <input type="radio" name="clr" id="c4" value="nevada" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC4.png" class="bgc" alt="">
                                 </label>
                                 <label for="c5">
-                                    <input type="radio" name="clr" id="c5">
+                                    <input type="radio" name="clr" id="c5" value="black" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC5.png" class="bgc" alt="">
                                 </label>
                                 <label for="c6">
-                                    <input type="radio" name="clr" id="c6">
+                                    <input type="radio" name="clr" id="c6" value="navy" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC6.png" class="bgc" alt="">
                                 </label>
                             </div>
-                            <p>Before you upload photos, please read:</p>
+                            <p>Before you upload photos, please read: <b>*</b></p>
                             <ul>
                                 <li>
                                     <img src="assets/img/icons/icon.svg" alt="">
@@ -158,7 +157,7 @@
                                 </li>
                                 <li>
                                     <label for="ckb" class="ckb">
-                                        <input type="checkbox" name="" id="ckb">
+                                        <input type="checkbox" name="i_agree" id="ckb" value="yes" required>
                                         <span></span>
                                         I Have read and understood the terms above agree with it.
                                     </label>
@@ -166,29 +165,30 @@
                                 <span>To continue, you must read the terms first and aggre with that.</span>
                             </ul>
                             <img src="assets/img/image.png" class="bigImg" alt="">
-                            <p>Upload your pet photo</p>
-                            <label for="#" class="fileUpload">
-                                <input type="file" name="" id="">
+                            <p>Upload your pet photo <b>*</b></p>
+                            <label for="#petfileUp" class="fileUpload">
+                                <input type="file" name="petFile[]" id="petfileUp" accept=".png,.jpg,.jpeg" multiple required>
                                 <img src="assets/img/icons/gallery.png" alt="">
                                 <p>Drop your image here, or <b>browse</b></p>
                                 <span>Supports: JPG, PNG, JPEG</span>
                             </label>
-                            <label for="#">
-                                <input type="text" placeholder="Name of the pet" name="" id="">
+                            <label for="#namepets">
+                                <input type="text" placeholder="Name of the pet" name="namepets" id="namepets" required>
                             </label>
                             <p>Add poster/pet name. Leave empty if you don't want to add any names</p>
-                            <label for="rdo" class="mb-3">
-                                <input type="radio" name="" id="rdo">
-                                No Name
-                            </label>
-                            <label for="#">
-                                <input type="text" placeholder="e.g. Boots & Sam" name="" id="">
+                            <label for="#" class="mb-3 doneThat"> 
+                                <div class="rdoBtn name_giving_permision" style="cursor:pointer">
+                                    <span class="radio"></span>
+                                    No Name 
+                                    <input type="hidden" class="d-none" name="ptNms">
+                                </div>
+                                <input type="text" placeholder="e.g. Boots & Sam" name="petname" id="">
                                 <img src="assets/img/image2.png" alt="">
-                            </label>
-                            <p>Any other instruction?</p>
+                            </label> 
+                            <p>Any other instruction? <b>*</b></p>
                             <label for="#">
-                                <input type="text" placeholder="E.g. remove collar" name="" id="">
-                            </label>
+                                <input type="text" placeholder="E.g. remove collar" name="introduction" id="" required>
+                            </label> 
                             <button type="submit">
                                 Submit 
                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -197,14 +197,14 @@
                                 </svg>
                             </button>
                         </form>
-                        <form class="form second_form">
+                        <form class="form second_form" action="welcome.php" method="post" enctype="marlitpart/form-data">
                             <span style="color: red;" class="d-block mt-5">The information you provide below will need to match with the order placed.</span>
                             <p>Please provide your order email address. Preferably the same one as your order (makes it easy for us to locate your order). </p>
                             <label for="#">
                                 <input type="text" placeholder="Your name" name="" id="" required>
                                 <input type="text" placeholder="Your email address" name="" id="" required>
                             </label>
-                            <p>How many pets are in your order?</p>
+                            <p>How many characters are in your order?</p>
                             <div class="flexContents">
                                 <label for="r1">
                                     <input type="radio" name="pets" id="r1">
@@ -226,6 +226,10 @@
                                     <input type="radio" name="pets" id="r5">
                                     <span>5</span>
                                 </label>
+                                <label for="r6">
+                                    <input type="radio" name="pets" id="r6">
+                                    <span>6</span>
+                                </label>
                             </div>
                             <p>What did you order?</p>
                             <div class="withOrderFlex">
@@ -246,37 +250,31 @@
                             <select name="" id="" >
                                 <option value="">Select Size</option>
                             </select>
-                            <p>Choose your background color:</p>
-                            <div class="csClr">
-                                <label for="c1">
-                                    <input type="radio" name="clr" id="c1">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC.png" class="bgc" alt="">
+                            <p>Choose your background color:</p> 
+                            <div class="flexContents slClr">
+                                <label for="cr1">
+                                    <input type="radio" name="bgClrs" id="cr1">
+                                    <span>1</span>
                                 </label>
-                                <label for="c2">
-                                    <input type="radio" name="clr" id="c2">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC2.png" class="bgc" alt="">
+                                <label for="cr2">
+                                    <input type="radio" name="bgClrs" id="cr2">
+                                    <span>2</span>
                                 </label>
-                                <label for="c3">
-                                    <input type="radio" name="clr" id="c3">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC3.png" class="bgc" alt="">
+                                <label for="cr3">
+                                    <input type="radio" name="bgClrs" id="cr3">
+                                    <span>3</span>
                                 </label>
-                                <label for="c4">
-                                    <input type="radio" name="clr" id="c4">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC4.png" class="bgc" alt="">
+                                <label for="cr4">
+                                    <input type="radio" name="bgClrs" id="cr4">
+                                    <span>4</span>
                                 </label>
-                                <label for="c5">
-                                    <input type="radio" name="clr" id="c5">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC5.png" class="bgc" alt="">
+                                <label for="cr5">
+                                    <input type="radio" name="bgClrs" id="cr5">
+                                    <span>5</span>
                                 </label>
-                                <label for="c6">
-                                    <input type="radio" name="clr" id="c6">
-                                    <img src="assets/img/tick.png" class="tick" alt="">
-                                    <img src="assets/img/bgC6.png" class="bgc" alt="">
+                                <label for="cr6">
+                                    <input type="radio" name="bgClrs" id="cr6">
+                                    <span>6</span>
                                 </label>
                             </div>
                             <p>Before you upload photos, please read:</p>
@@ -316,7 +314,7 @@
                             </ul> 
                             <p>Upload your reference photo: </p>
                             <label for="#" class="fileUpload">
-                                <input type="file" name="" id="">
+                                <input type="file" name="" id="" accept="png,jpg,jpeg">
                                 <img src="assets/img/icons/gallery.png" alt="">
                                 <p>Drop your image here, or <b>browse</b></p>
                                 <span>Supports: JPG, PNG, JPEG</span>
@@ -339,13 +337,8 @@
         </div>
         <!-- billyPet -->
 
+ 
 
-    
-		<!-- JS here --> 
-        <script src="assets/js/jquery-3.4.1.min.js"></script>
-        <script src="assets/js/popper.min.js"></script>
-        <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <script src="assets/js/main.js"></script> 
-    </body>
-</html>
+<?php
+    include_once "footer.php";
+?>
