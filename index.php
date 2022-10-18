@@ -99,32 +99,32 @@
                             <p>Choose your background color: <b>*</b></p>
                             <div class="csClr">
                                 <label for="c1">
-                                    <input type="radio" name="clr" id="c1" value="white" required>
+                                    <input type="radio" name="clr" id="c1" value="White" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC.png" class="bgc" alt="">
                                 </label>
                                 <label for="c2">
-                                    <input type="radio" name="clr" id="c2" value="eggshell" required>
+                                    <input type="radio" name="clr" id="c2" value="Eggshell" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC2.png" class="bgc" alt="">
                                 </label>
                                 <label for="c3">
-                                    <input type="radio" name="clr" id="c3" value="olive" required>
+                                    <input type="radio" name="clr" id="c3" value="Olive" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC3.png" class="bgc" alt="">
                                 </label>
                                 <label for="c4">
-                                    <input type="radio" name="clr" id="c4" value="nevada" required>
+                                    <input type="radio" name="clr" id="c4" value="Nevada" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC4.png" class="bgc" alt="">
                                 </label>
                                 <label for="c5">
-                                    <input type="radio" name="clr" id="c5" value="black" required>
+                                    <input type="radio" name="clr" id="c5" value="Black" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC5.png" class="bgc" alt="">
                                 </label>
                                 <label for="c6">
-                                    <input type="radio" name="clr" id="c6" value="navy" required>
+                                    <input type="radio" name="clr" id="c6" value="Navy" required>
                                     <img src="assets/img/tick.png" class="tick" alt="">
                                     <img src="assets/img/bgC6.png" class="bgc" alt="">
                                 </label>
@@ -197,87 +197,94 @@
                                 </svg>
                             </button>
                         </form>
-                        <form class="form second_form" action="welcome.php" method="post" enctype="marlitpart/form-data">
+                        <form class="form second_form" action="incs/form.second.inc.php" method="post" enctype="multipart/form-data">
                             <span style="color: red;" class="d-block mt-5">The information you provide below will need to match with the order placed.</span>
-                            <p>Please provide your order email address. Preferably the same one as your order (makes it easy for us to locate your order). </p>
+                            <p>Please provide your email address. Preferably the same one as your order (makes it easy for us to locate your order). <b>*</b></p>
                             <label for="#">
-                                <input type="text" placeholder="Your name" name="" id="" required>
-                                <input type="text" placeholder="Your email address" name="" id="" required>
+                                <input type="text" placeholder="Your name" name="name" id="" required>
+                                <input type="text" placeholder="Your email address" name="email" id="" required>
                             </label>
-                            <p>How many characters are in your order?</p>
+                            <p>How many characters are in your order? <b>*</b></p>
                             <div class="flexContents">
                                 <label for="r1">
-                                    <input type="radio" name="pets" id="r1">
+                                    <input type="radio" value="1" name="characters" id="r1" required>
                                     <span>1</span>
                                 </label>
                                 <label for="r2">
-                                    <input type="radio" name="pets" id="r2">
+                                    <input type="radio" value="2" name="characters" id="r2" required>
                                     <span>2</span>
                                 </label>
                                 <label for="r3">
-                                    <input type="radio" name="pets" id="r3">
+                                    <input type="radio" value="3" name="characters" id="r3" required>
                                     <span>3</span>
                                 </label>
                                 <label for="r4">
-                                    <input type="radio" name="pets" id="r4">
+                                    <input type="radio" value="4" name="characters" id="r4" required>
                                     <span>4</span>
                                 </label>
                                 <label for="r5">
-                                    <input type="radio" name="pets" id="r5">
+                                    <input type="radio" value="5" name="characters" id="r5" required>
                                     <span>5</span>
                                 </label>
                                 <label for="r6">
-                                    <input type="radio" name="pets" id="r6">
+                                    <input type="radio" value="6" name="characters" id="r6" required>
                                     <span>6</span>
                                 </label>
                             </div>
-                            <p>What did you order?</p>
+                            <p>What did you order? <b>*</b></p>
                             <div class="withOrderFlex">
                                 <label for="f1">
-                                    <input type="radio" name="order" id="f1">
+                                    <input type="radio" name="order" id="f1" value="Digital File" required>
                                     <span>Digital File</span>
                                 </label>
                                 <label for="f2">
-                                    <input type="radio" name="order" id="f2">
+                                    <input type="radio" name="order" id="f2" value="Print Only (No Frame)" required>
                                     <span>Print Only (No Frame)</span>
                                 </label>
                                 <label for="f3">
-                                    <input type="radio" name="order" id="f3">
+                                    <input type="radio" name="order" id="f3" value="Framed Print" required>
                                     <span>Framed Print</span>
                                 </label> 
                             </div>
-                            <p>What size did you choose? Or what size would you like for the Digital File (if purchased) option?</p>
-                            <select name="" id="" >
+                            <p>What size did you choose? Or what size would you like for the Digital File (if purchased) option? <b>*</b></p>
+                            <select name="size" id="" required>
                                 <option value="">Select Size</option>
+                                <option value="A5" default>A5</option>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                                <option value="A4">A4</option>
+                                <option value="8x10">8x10</option>
+                                <option value="12x16">12x16</option>
+                                <option value="18x24">18x24</option>
                             </select>
-                            <p>Choose your background color:</p> 
+                            <p>Choose your background color: <b>*</b></p>
                             <div class="flexContents slClr">
                                 <label for="cr1">
-                                    <input type="radio" name="bgClrs" id="cr1">
+                                    <input type="radio" name="bgClrs" id="cr1" value="White">
                                     <span>1</span>
                                 </label>
                                 <label for="cr2">
-                                    <input type="radio" name="bgClrs" id="cr2">
+                                    <input type="radio" name="bgClrs" id="cr2" value="Red">
                                     <span>2</span>
                                 </label>
                                 <label for="cr3">
-                                    <input type="radio" name="bgClrs" id="cr3">
+                                    <input type="radio" name="bgClrs" id="cr3" value="Blue">
                                     <span>3</span>
                                 </label>
                                 <label for="cr4">
-                                    <input type="radio" name="bgClrs" id="cr4">
+                                    <input type="radio" name="bgClrs" id="cr4" value="Green">
                                     <span>4</span>
                                 </label>
                                 <label for="cr5">
-                                    <input type="radio" name="bgClrs" id="cr5">
+                                    <input type="radio" name="bgClrs" id="cr5" value="Black">
                                     <span>5</span>
                                 </label>
                                 <label for="cr6">
-                                    <input type="radio" name="bgClrs" id="cr6">
+                                    <input type="radio" name="bgClrs" id="cr6" value="Yellow">
                                     <span>6</span>
                                 </label>
                             </div>
-                            <p>Before you upload photos, please read:</p>
+                            <p>Before you upload photos, please read: <b>*</b></p>
                             <ul>
                                 <li>
                                     <img src="assets/img/icons/icon.svg" alt="">
@@ -304,25 +311,25 @@
                                     We do not judge the quality of your photo (unless it's very poor in quality) 
                                 </li>
                                 <li>
-                                    <label for="ckb" class="ckb">
-                                        <input type="checkbox" name="" id="ckb">
+                                    <label for="ckb2" class="ckb">
+                                        <input type="checkbox" name="i_agree" id="ckb2" value="yes" required>
                                         <span></span>
                                         I Have read and understood the terms above agree with it.
                                     </label>
                                 </li>
                                 <span>To continue, you must read the terms first and aggre with that.</span>
                             </ul> 
-                            <p>Upload your reference photo: </p>
-                            <label for="#" class="fileUpload">
-                                <input type="file" name="" id="" accept="png,jpg,jpeg">
+                            <p>Upload your reference photo:<b>*</b></p>
+                            <label for="#files" class="fileUpload">
+                                <input type="file" name="files[]" id="files" accept=".png,.jpg,.jpeg" multiple required>
                                 <img src="assets/img/icons/gallery.png" alt="">
                                 <p>Drop your image here, or <b>browse</b></p>
                                 <span>Supports: JPG, PNG, JPEG</span>
                             </label> 
-                            <p>Anything else to note? </p>
-                            <label for="#">
-                                <input type="text" placeholder="E.g. remove collar" name="" id="">
-                            </label>
+                            <p>Anything else to note?<b>*</b></p>
+                            <label for="#note">
+                                <input type="text" placeholder="E.g. remove collar" name="note" id="note" required>
+                            </label> 
                             <button type="submit">
                                 Submit 
                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -330,7 +337,7 @@
                                     <path d="M20.33 13.012H3.5C3.09 13.012 2.75 12.672 2.75 12.262C2.75 11.852 3.09 11.512 3.5 11.512H20.33C20.74 11.512 21.08 11.852 21.08 12.262C21.08 12.672 20.74 13.012 20.33 13.012Z" fill="white"/>
                                 </svg>
                             </button>
-                        </form>
+                        </form> 
                     </div>
                 </div>
             </div>

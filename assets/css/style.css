@@ -742,6 +742,7 @@ span.sts {
   text-align: center;
   width: max-content;
   border-radius: 50px;
+  text-transform: capitalize;
   color: #fff;
 }
 
@@ -772,8 +773,29 @@ span.sts.success {
   display: flex;
   align-items: center;
   color: red;
+  position: relative;
+}
+.nte p {
+  position: absolute;
+  background: #ebebeb;
+  margin: 0;
+  right: 28px;
+  top: 23px;
+  min-width: 100px;
+  max-width: 300px;
+  border-radius: 3px;
+  padding: 4px 10px;
+  color: #747474;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 2;
 }
 
+.nte:hover p {
+  opacity: 1;
+  visibility: visible;
+}
 .nte svg#Capa_1 path {
   fill: red;
 }

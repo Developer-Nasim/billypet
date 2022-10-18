@@ -1,4 +1,14 @@
 /* Big screen :1200px. */
+@media (max-width: 1520px) {
+    .dtable{
+        overflow: auto;
+    }
+    .dtable table{
+        min-width: 1486px;
+    }
+
+}
+/* Big screen :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 
 
@@ -92,6 +102,37 @@ form.form .flexContents {
 .choseSteps_bottom{
     flex-wrap: wrap;
 }
+.drpDn > span { 
+    padding: 7px 10px; 
+    padding-right: 30px;
+    font-size: 13px;
+}
+.avater img.avater {
+    width: 40px;
+    height: 40px; 
+}
+.drpDn {
+    position: relative;
+    margin-right: 8px;
+}
+.menu ul a { 
+    padding: 10px 8px; 
+    margin-right: 2px; 
+    padding-left: 10px;
+    font-size: 13px;
+}
+.menu ul a span { 
+    margin-left: 3px; 
+    padding: 1px 3px;
+    font-size: 11px;
+}
+.drpDn > span:after { 
+    border-bottom: 7px solid #ff000000;
+    border-right: 7px solid white; 
+    right: 13px;
+    top: 10px;
+}
+
 
 
 
