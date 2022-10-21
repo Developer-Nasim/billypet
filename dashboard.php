@@ -6,6 +6,10 @@
         header('location: login.php');
     }
 
+    // u7cishq6mgylg
+    // ,lk:f^$c*$c~
+    // dbobifxby92xlm
+
     $serverName = "localhost";
     $username = "root";
     $password = "";
@@ -30,9 +34,12 @@
 
  
 
+    if (!$_SESSION['user_name']) {
+        header('location: login.php');
+    }else{
 ?>
 
-       
+   
         <!-- dasboard -->
         <div class="dashboard">
             <div class="dash-header">
@@ -312,5 +319,7 @@
     
 
 <?php
+            }
+
     include_once "footer.php";
 ?>

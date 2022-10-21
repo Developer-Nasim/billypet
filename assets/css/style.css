@@ -194,7 +194,7 @@ img{
 .choseSteps_bottom a p {
   margin: 15px 0;
   font-weight: 500;
-  font-size: 28px;
+  font-size: 22px;
   line-height: 150%; 
   color: #000000;
 }
@@ -495,8 +495,11 @@ label.ckb span {
   border: 1px solid #1c3043;
   margin-right: 5px;
   transition: .3s;
+  /* display: none; */
 }
-
+label.fileUpload.requered {
+  border-color: red;
+}
 label.ckb span:after {
   content: "";
   position: absolute;
@@ -510,8 +513,34 @@ label.ckb span:after {
   opacity: 0;
   transition: .3s;
 }
+select{
+  position: absolute;
+  display: block !important;
+  
+}
+input.it_is_empty {
+  border-color: red;
+}
+label.ckb.requered span {
+  border-color: red;
+}
+img.imgPrev {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+select{
+  border-color: transparent;
+  background-color: transparent;
+}
 label.ckb input{
   display: none;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+}
+.niceSelectItIs.requered .nice-select{
+  border-color: red;
 }
 label.ckb input:checked~span{ 
   background: #0085FF;
@@ -838,7 +867,10 @@ form.form .flexContents.slClr label:nth-child(5) span{
 form.form .flexContents.slClr label:nth-child(6) span{
   background-color: #F0D4C6; 
 }
-
+.choseSteps,form.form {
+  max-width: 530px;
+  margin: auto;
+}
 
 
 

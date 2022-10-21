@@ -3,7 +3,8 @@
     include_once "header.php";
     if (isset($_SESSION['user_name'])) {
         header('location: dashboard.php'); 
-    } 
+    }else{
+        
 
   
 ?>
@@ -33,5 +34,6 @@
         
 
 <?php 
+    }
     include_once "footer.php";
 ?>

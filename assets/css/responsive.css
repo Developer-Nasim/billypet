@@ -63,6 +63,7 @@
   }
   form.form .flexContents label {
     margin-right: 0;
+    margin-bottom: 8px;
   }
 .withOrderFlex label span {
     padding: 10px 7px;
@@ -87,7 +88,7 @@ form.form .flexContents {
 
 .choseSteps_bottom a {
     margin-top: 40px;
-    width: 100%;
+    width: 48%;
 }
 
 .choseSteps_bottom a img {
@@ -98,10 +99,7 @@ form.form .flexContents {
 .choseSteps_bottom a p {
     font-size: 16px;
     margin: 10px 0;
-}
-.choseSteps_bottom{
-    flex-wrap: wrap;
-}
+} 
 .drpDn > span { 
     padding: 7px 10px; 
     padding-right: 30px;
@@ -132,7 +130,10 @@ form.form .flexContents {
     right: 13px;
     top: 10px;
 }
-
+.nice-select { 
+    padding: 1px 14px; 
+    height: 45px; 
+}
 
 
 
